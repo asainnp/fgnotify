@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+########################################################################
+# fgnotify - Notifying Foreground Console (tty) with a message         #
+#            in up-right corner, (and restoring chars after 1 second)  #
+# Asain Kujovic, march 2015.                                           # 
+# Notes: - root(sudo) or tty-group permisions needed                   #
+#        - 3 external tools used:  >> od, dd, sed <<                   #
+#        - restore msg performed only when notify is still present     #
+#        - bin2dec with 'od -iAn' (integer, adresses-none)             #
+#        - color in sed hexa format x47 means 4(red)-bgc, 7(white)-fgc #
+########################################################################
+
+message="notify: $1" ; msglen=${#message}
+  color='\x47'       ; dblmsg=$(sed "s/\(.\)/\1$color/g" <<<"$message")
+ sleepS=1            ; dbllen=${#dblmsg}
+
+targetCA=/dev/vcsa     
+ [ -c $targetCA ] || targetCA=/dev/vcsa0
+ [ -c $targetCA ] || { echo no input active console           ; exit; }
+ [ -w $targetCA ] || { echo no write permissions on $targetCA ; exit; }
+
+getxpos() { ww=$(dd if=$targetCA bs=1 skip=1 count=1 | od -iAn) ;  
+            xx=$((ww-$msglen)) ; dblxx=$(( 4 + $xx * 2 ))       ; }
+savemsg() { dd if=$targetCA bs=1 skip=$dblxx count=$dbllen      ; }
+display() { dd of=$targetCA bs=1 seek=$dblxx count=${#1} <<<"$1"; }
+restore() { [ "$(savemsg)" == "$dblmsg" ] && display "$1"       ; }
+
+exec 2>/dev/null #<-quiet dd,...
+getxpos              ; prevmsg="$(savemsg)"
+display "$dblmsg"
+sleep    $sleepS     ; restore "$prevmsg"
+########################################################################
