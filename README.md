@@ -19,4 +19,5 @@ Install:
 Example usage:
 > sudo fgnotify "new mail in inbox"
 
-Running it on tty / some X remote terminal / crone / detached process / remote SSH, ... message should be displayed on active-foreground tty console of computer running this process.
+Running it on tty / some X remote terminal / crone / detached process / remote SSH, 
+... should display message on active-foreground tty console of computer running this process.
