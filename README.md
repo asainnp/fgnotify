@@ -1,6 +1,6 @@
 # fgnotify 
 #### Bash-Shell Script, Notifying Foreground Console (active TTY) 
-notifying by: show message in upper-right corner, and restore underlying chars after period.
+*notifying by*: show message in upper-right corner, and restore underlying chars after period.
 
 Asain Kujovic, march 2015.
 
@@ -19,6 +19,6 @@ Install:
 Example run:
 > sudo fgnotify "new mail in inbox"
 
-Running it inside tty /some X remote terminal /crone /detached process /remote SSH / inputrcKeyBind ...  
+Running it inside tty /some X remote terminal /crone /detached process /remote SSH /inputrc-keyBind ...  
 should display message on active-foreground tty console of computer running this process,  
-over underlaying shell prompt/screen/tmux/login prompt... that runs inside the fg-tty.
+over underlaying shell-prompt/screen/tmux/login-prompt... that runs inside the fg-tty.
