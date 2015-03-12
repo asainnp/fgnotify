@@ -10,9 +10,12 @@ Notes:
 
 Install:
 > git clone https://github.com/asainnp/fgnotify.git
+
 > cd fgnotify
+
 > cp fgnotify /usr/bin/.
 
 Example usage:
 > sudo fgnotify "new mail in inbox"
+
 Running it on tty / some X remote terminal / crone / detached process / remote SSH, ... message should be displayed on active-foreground tty console of computer running this process.
