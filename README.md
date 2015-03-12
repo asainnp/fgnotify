@@ -14,7 +14,7 @@ Notes:
 Install:
 > git clone https://github.com/asainnp/fgnotify.git  
 > cd fgnotify  
-> cp fgnotify /usr/bin/.  
+> sudo cp fgnotify /usr/bin/.  
 
 Example run:
 > sudo fgnotify "new mail in inbox"
