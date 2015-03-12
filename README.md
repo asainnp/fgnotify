@@ -20,5 +20,5 @@ Example run:
 > sudo fgnotify "new mail in inbox"
 
 Running it inside tty /some X remote terminal /crone /detached process /remote SSH / inputrcKeyBind ...  
-... should display message on active-foreground tty console of computer running this process.  
-over underlaying shell/screen/tmux/login, that runs in the tty.
+should display message on active-foreground tty console of computer running this process,  
+over underlaying shell prompt/screen/tmux/login prompt... that runs inside the fg-tty.
