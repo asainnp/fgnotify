@@ -1,5 +1,7 @@
 # fgnotify 
-### Bash-Shell Script, Notifying Foreground Console (tty) with a message in up-right corner, (and restoring chars after period)
+### Bash-Shell Script, Notifying Foreground Console (active TTY) 
+notifying by show message in upper-right corner, and reste underlying chars after period.
+
 Asain Kujovic, march 2015.
 
 Notes: 
