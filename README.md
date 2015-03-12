@@ -10,9 +10,9 @@ Notes:
 
 Install:
 > git clone https://github.com/asainnp/fgnotify.git
-
+>
 > cd fgnotify
-
+>
 > cp fgnotify /usr/bin/.
 
 Example usage:
