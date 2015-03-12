@@ -9,6 +9,8 @@ Notes:
 - color in sed hexa format x47 means 4(red)-bgc, 7(white)-fgc
 
 Install:
+> git clone https://github.com/asainnp/fgnotify.git
+> cd fgnotify
 > cp fgnotify /usr/bin/.
 
 Example usage:
