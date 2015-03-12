@@ -7,6 +7,7 @@ Notes:
 - 3 external tools used:  >> od, dd, sed <<
 - restore msg performed only when notify is still present
 - color in sed hexa format x47 means 4(red)-bgc, 7(white)-fgc
+- 16 lines of active code
 
 Install:
 > git clone https://github.com/asainnp/fgnotify.git  
