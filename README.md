@@ -16,8 +16,9 @@ Install:
 > cd fgnotify  
 > cp fgnotify /usr/bin/.  
 
-Example usage:
+Example run:
 > sudo fgnotify "new mail in inbox"
 
-Running it on tty / some X remote terminal / crone / detached process / remote SSH, 
-... should display message on active-foreground tty console of computer running this process.
+Running such command on tty / some X remote terminal / crone / detached process / remote SSH,  
+... should display message on active-foreground tty console of computer running this process.  
+over underlaying shell/screen/tmux/login, that runs in the tty.
