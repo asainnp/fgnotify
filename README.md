@@ -7,3 +7,9 @@ Notes:
 - 3 external tools used:  >> od, dd, sed <<
 - restore msg performed only when notify is still present
 - color in sed hexa format x47 means 4(red)-bgc, 7(white)-fgc
+
+Install:
+> cp fgnotify /usr/bin/.
+
+Example usage:
+> sudo fgnotify "new mail in inbox"
